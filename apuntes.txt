@@ -1,0 +1,70 @@
+datos mutables= 
+datos inmutables= 
+
+funcion lambda 
+palabra reservada lambda, parametros pueden ser mas de uno y por omision y valores de retorno
+<nombre>=lambda <parametros de llegada> : <return>
+
+raiz = lambda a,b:a**(1/b)
+donde a es el numero que quiero calcular la raiz y b es el indice 
+valor por omision 
+raiz = lambda a,b=2:a**(1/b) de la misma forma que con funciones normales
+
+from <modulo> import <funcion> (pesa menos)
+
+import <modulo> as <nombre_nuevo_modulo> cambia el nombre de la libreria
+
+from <modulo> import <fumcion> as <nombre_nuevo_funcion> 
+
+metodos nuevos para listas:
+extend; sintaxis: lista1.extend(lista2) 
+isnert; inserta un elemento en una posicion especifica de la lista. sintaxis: lista.insert(<posicion>,<dato>)
+remove; elimina el primer elemento que encuentre con un valor especificado. lista.remove(<elemento)  
+pop; elimina elemento por posicion especificada (indice). sintaxis; lista.pop(elemento); elemento = lista.pop(elemento) lo borras y lo guardas. si no le pasas nada borra el ultimo 
+in;te dice si esta el elemento (true or false(en una lista)) 
+index; devuelve la posicion donde se encuentra el elemento, busca por contenido y devuelve pos. sintaxis; lista.index(elemento)
+count; devuelve el numero de veces que aparece un elemento en la lista; cuenta = lista.count(elemento) 
+sort; ordena la lista de forma ascendente. lista.sort(). lista.sort(reverse=True) -> descendente
+-> para no perder consistencia entre listas paralelas
+-> paquete = list(zip(lista_1, lista_2, lista_3)) 
+-> paquete.sort(key=lambda x: x[i]) 
+reverse; invierte la lista. sintaxis; lista.reverse()
+copy; copias la lista asi como te digo chango; lista2= lista1.copy(). genera listas independientes
+max; max (lista) 
+min; min(lista)
+max y min no dan posicion y no contempla <<por si solo>> mas de un valor maximo 
+sum; devuelve la suma de todos los elementos; sum(lista)
+sorted; devuelve una lista ordenada. sorted(lista). 
+variable = sorted(lista, key=lambda x: x[1]
+zip; empaquetar listas en una tupla
+tp: funciones. modulos, listas, matrices, cadenas de caract
+tp parte 2: excepciones, archivos, tupla(maybe), json(maybe) 
+is; true or false 
+
+----------------------------------------------------------------------------
+CORTES O REBANADAS DE LISTAS 
+
+operador nuevo = ":" 
+[start:stop:step], el valor por omision de step es 1 
+el stop es el anterior, osea, si el slice es de [2:7]
+va a empezar desde 2 -> 6 
+el slicing me da una nueva lista por resultado 
+el paso suma posiciones 
+el valor por omision de inicio es 0
+el valor por omision de fin es el len de la lista
+el corte es uno antes del valor de stop 
+*como hago para invertir una lista por la tecnica de rebanado 
+*[::-1]
+
+MODIFICAR VALORES DE LISTA 
+L[1:4] = [1,2,3] -> modifica los valores de la lista entre las posiciones, si te pasas de valores alarga la lista 
+[1:1] abre un hueco en la lista, no reemplaza nada
+[1:2] reemplaza la posicion de 1  
+L2 = L1[:] COPIAS TODA LA LISTA 
+
+LISTAS POR COMPRENSION 
+L = [X**2 for X in range (5)]
+l = [elemento (lista, variable, operacion) for i in range(x)]
+l = [elemento for elemento in lista if elemento >= 0] --> FILTRO 
+condicional dentro de la lista puede contener tanto if como else 
+
