@@ -1,3 +1,5 @@
+# Se utiliza para determinar si una cadena  coincide con un patrón de expresión regular  desde el inicio de la cadena.​
+
 import re
 
 cadenas = ['A123', 'B456', 'C789', '123A', 'D1234']

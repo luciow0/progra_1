@@ -1,3 +1,6 @@
+# encontrar todas las ocurrencias de un patron en una cadena y devolverlas como una lista de cadenas 
+# A diferencia de search, que encuentra solo  la primera ocurrencia, findall recorre toda  la cadena y retorna todas las coincidencias  encontradas
+
 import re
 
 texto = "Juan tiene el télefono 1234-5678, Oliver tiene el  teléfono 11-15-3456-7890 y Gabriela el 11-15-7654-3210."

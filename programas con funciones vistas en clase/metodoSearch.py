@@ -1,3 +1,6 @@
+# Permite buscar un patrón de expresión  regular dentro de una cadena en  cualquier posición.
+# A diferencia de match,  que verifica solo el inicio de la cadena,  search examina toda la cadena en busca  de la primera ocurrencia del patrón  especificado.​
+
 import re 
 
 cadena = "El precio del producto es $11.33."

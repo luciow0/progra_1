@@ -1,3 +1,6 @@
+# todas las ocurrencias de un patron en un texto, devuelve un iterador que produce objetos match para cada coincidencia encontrada 
+# Cada objeto Match generado por el  iterador contiene información sobre la  posición y el contenido de la coincidencia,  permitiendo un procesamiento detallado  de cada coincidencia encontrada en el  texto.​
+
 import re
 
 texto = "Los correos de contacto son oliver@dominio.com y  gabriela@dominio.com."
