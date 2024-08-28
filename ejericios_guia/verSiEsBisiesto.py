@@ -4,10 +4,3 @@ def verSiEsBisiesto(año):
         flag =  True
     return flag
 
-verSiEsBisiesto(2060)
-
-if verSiEsBisiesto: 
-    print("si es ")
-
-else: 
-    print("no es ")

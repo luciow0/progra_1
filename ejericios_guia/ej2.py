@@ -7,20 +7,14 @@
 import verSiEsBisiesto 
 
 def verificarFecha(dia,mes,año): 
-    diasMeses = [
-     (1,31),
-     (2,28), 
-     (3,31),
-     (4,30),
-     (5,31),
-     (6,30),
-     (7,31),
-     (8,31),
-     (9,30),
-     (10,31),
-     (11,30),
-     (12,31)]
-    
+    valido = False
+    dias = [31,28,31,30,31,30,31,31,30,31,30,31]
+
+    if dia >= dias[mes]: 
+        valido = True
+        
+    return valido
+
 
 def programaPrincipal(): 
 
