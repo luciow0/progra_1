@@ -7,10 +7,11 @@
 import verSiEsBisiesto 
 
 def verificarFecha(dia,mes,año): 
+    print(dia,mes,año)
     valido = False
     dias = [31,28,31,30,31,30,31,31,30,31,30,31]
-
-    if dia >= dias[mes]: 
+    print(dias[mes])
+    if dia <= dias[mes]: 
         valido = True
         
     return valido
@@ -20,13 +21,20 @@ def programaPrincipal():
 
     dia = int(input("ingrese el dia "))
     while dia < 1 or dia > 31: 
-        dia = int(input("ingrese el dia "))    
+        dia = int(input("ingrese el dia "))  
+         
     mes = int(input("ingrese el mes "))
     while mes < 1 or mes > 12: 
-        mes = int(input("ingrese el mes "))    
+        mes = int(input("ingrese el mes "))      
+
     año = int(input("ingrese el año "))
-    while año < 1000 or año > 2024: 
+    while año < 1000 and año > 2024: 
         año = int(input("ingrese el año "))
 
-    verificarFecha(dia,mes,año)
+    verificar = verificarFecha(dia,mes,año)
+    if verificar == True: 
+        print('fecha valida')
+    else: 
+        print('fecha invalida')
         
+programaPrincipal()
