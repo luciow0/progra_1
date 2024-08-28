@@ -23,9 +23,6 @@ def verificarLimite(mes,año):
 
 def diaSiguiente(dia,mes,año): 
     limite = verificarLimite(mes,año) 
-    corroborarAñoBisiesto = verSiEsBisiesto(año)
-    if mes == 2 and corroborarAñoBisiesto == True:
-        limite += 1
     if dia + 1 > limite: 
         if mes + 1 > 12: 
             mes = 1
