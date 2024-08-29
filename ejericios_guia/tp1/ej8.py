@@ -1,3 +1,4 @@
+#codigo que carga la profesora 
 def diadelasemana(dia,mes,año):
     if mes < 3:
         mes = mes + 10
