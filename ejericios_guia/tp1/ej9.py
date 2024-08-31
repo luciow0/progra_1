@@ -1,17 +1,103 @@
-#Un productor frutihortícola desea contabilizar sus cajones de naranjas según el peso
-#para poder cargar los camiones de reparto. La empresa cuenta con N camiones, y
-#cada uno puede transportar hasta media tonelada (500 kilogramos). En un cajón
-#caben 100 naranjas con un peso de entre 200 y 300 gramos cada una. Si el peso
-#de alguna naranja se encuentra fuera del rango indicado se la clasifica para
-#rocesar como jugo. Desarrollar un programa para ingresar la cantidad de naranjas
-#cosechadas e informar cuántos cajones se pueden llenar, cuántas naranjas son para
-#ugo y si hay algún sobrante de naranjas que deba considerarse para el siguiente
-#reparto. Simular el peso de cada unidad generando un número entero al azar entre
-#50 y 350.
-#Además, se desea saber cuántos camiones se necesitan para transportar la cose-
-#cha, considerando que la ocupación del camión no debe ser inferior al 80%; en
-#caso contrario el camión no serán despachado por su alto costo
 import random
 
-def cargarNaranjas(): 
-    print("")
+def cargarNaranjas(naranjasTotales): 
+    naranjasComer = 0
+    naranjasJugo = 0
+    cajonesNaranjaComer = 0
+    cajonesNaranjaJugo = 0
+    naranjasComerSobrantes = 0
+    naranjasJugoSobrantes = 0
+    naranjasRestantes = naranjasTotales
+    contadorCienComer = 0
+    contadorCienJugo = 0
+    pesoNaranjasComer = 0
+    pesoNaranjasJugo = 0
+
+    listaPesoCajonesNaranjasComer = []
+    listaPesoCajonesNaranjasJugo = []
+
+    for i in range(naranjasTotales): 
+
+        if naranjasRestantes > 100:
+            naranjaAux = random.randint(150,350)
+
+            if naranjaAux >= 200 and naranjaAux <= 300:
+                naranjasComer += 1
+                contadorCienComer += 1
+                pesoNaranjasComer += naranjaAux
+
+                if contadorCienComer == 100: 
+                    cajonesNaranjaComer += 1
+                    contadorCienComer = 0 
+                    listaPesoCajonesNaranjasComer.append(pesoNaranjasComer)
+                    pesoNaranjasComer = 0
+            else: 
+                naranjasJugo += 1
+                contadorCienJugo += 1
+                pesoNaranjasJugo += naranjaAux
+
+                if contadorCienJugo == 100:
+                    cajonesNaranjaJugo += 1
+                    contadorCienJugo = 0
+                    listaPesoCajonesNaranjasJugo.append(pesoNaranjasJugo)
+                    pesoNaranjasJugo = 0
+                    
+
+        else:
+            naranjaAux = random.randint(150,350)
+
+            if naranjaAux >= 200 and naranjaAux <= 300:
+                naranjasComerSobrantes += 1 
+
+            else: 
+                naranjasJugoSobrantes += 1
+        
+        naranjasRestantes -= 1
+
+    print("Cantidad total de naranjas ", naranjasTotales)
+
+    print("Cantidad total de naranjas comer ", naranjasComer)
+
+    print("Cantidad total de naranjas jugo ", naranjasJugo)
+
+    print("Cantidad total de cajones de naranja comer ", cajonesNaranjaComer)
+    
+    print("Cantidad total de cajones de naranja jugo ", cajonesNaranjaJugo)
+            
+    print("Cantidad total de naranjas comer restantes", naranjasComerSobrantes)
+    
+    print("Cantidad total de naranjas jugo restantes ", naranjasJugoSobrantes)
+
+    return contabilizarCamiones(cajonesNaranjaComer, cajonesNaranjaJugo,listaPesoCajonesNaranjasComer,listaPesoCajonesNaranjasJugo)
+
+def ingresarNaranjas(): 
+    naranjasTotales = int(input("Ingrese la cantidad total de naranjas de la cosecha "))
+    while naranjasTotales < 1:
+        naranjasTotales = int(input("Por favor ingrese una cantidad total de naranjas valida (> 1) "))
+    
+    return cargarNaranjas(naranjasTotales)
+
+def contabilizarCamiones(cajonesNaranjaComer, cajonesNaranjaJugo,listaPesoCajonesNaranjasComer,listaPesoCajonesNaranjasJugo): 
+    peso = 0
+    camiones = 0
+    pesoTotal = 0
+    camionNodespachado = 0
+    for j in range(len(listaPesoCajonesNaranjasComer) -1): 
+        peso += listaPesoCajonesNaranjasComer[j]
+        peso += listaPesoCajonesNaranjasComer[j]
+        pesoTotal += listaPesoCajonesNaranjasComer[j]
+        pesoTotal += listaPesoCajonesNaranjasComer[j]
+        
+        if peso >= 500000:
+            camiones += 1
+            peso = 0
+    if peso > 400000: 
+        camiones += 1 
+    else: 
+        camionNodespachado += 1
+    print("Se necesitaron ", camiones, " camionespara transportar ", pesoTotal,"Gr/",(pesoTotal // 1000),"Kg" ,"de naranjas para jugo y para comer,", camionNodespachado,"camion/es no fueron despachados por falta de naranjas (< 80%)")
+
+def main():
+    return ingresarNaranjas()
+
+main()
