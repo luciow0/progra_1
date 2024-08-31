@@ -55,4 +55,5 @@ print(lista)
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #metodo sort (lista.sort()) ordena los valores de las listas, de manera default lo hace de menor a mayor 
 #pero, escribiendo: lista.sort(reverse=True), ordena de mayor a menor, ojo con perder el paralelismo y las cadenas y simbolos se ordenan segun su valor en la tablas ASCII 
-
+#------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#list() convierte cualquier secuencia en una lista 
