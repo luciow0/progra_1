@@ -1,5 +1,6 @@
 import random
 
+<<<<<<< HEAD
 def cargarNaranjas(naranjasTotales): 
     naranjasComer = 0
     naranjasJugo = 0
@@ -101,3 +102,35 @@ def main():
     return ingresarNaranjas()
 
 main()
+=======
+def cargarNaranjas(cantidad):
+    naranjasJugo = []
+    naranjasCajon = []
+    cajonesDeNaranja = []
+    contador = 0
+    while j < cantidad:
+        naranjasAux = random.randint(150,350)
+        if naranjasAux < 200 or naranjasAux > 300: 
+            naranjasJugo[j].append(naranjasAux)
+        else:
+            if contador <= 100: 
+                naranjasCajon[j].append(naranjasAux)
+                contador += 1
+            else:
+                contador = 0
+
+        j += 1
+
+        print("")
+
+for i in range() : 
+
+    for j in range(): 
+
+        if contador <= 100: 
+                naranjasCajon[i] += naranjasAux
+                cajonesDeNaranja
+                contador += 1
+        else:
+            contador = 0
+>>>>>>> refs/remotes/origin/main
