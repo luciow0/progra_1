@@ -183,7 +183,9 @@ def determinarColumnasCapicua(matriz):
             if matriz[f][c] == matriz[-f][-c]: 
                 columnasCapicua.append() 
                 break
-            else: 
+            
 
     return capicua
 
+#nunca romper un bucle si no es necesario, seguir el ciclo original 
+#nigun volumen de datos se almacena en memoria 
