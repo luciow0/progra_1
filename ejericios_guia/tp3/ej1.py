@@ -1,3 +1,11 @@
+#matriz de prueba simetrica diagonal izquierda
+matrizSimetricaPruebaSecundaria = [
+    [1, 2, 3, 1],
+    [2, 3, 1, 3],
+    [3, 1, 3, 2],
+    [1, 3, 2, 1]
+]
+
 #matriz de prueba
 matriz = [
     [1,2,3,4],
@@ -5,7 +13,14 @@ matriz = [
     [1,2,3,4]
 ]
 
-#matriz desordenada de prueba
+#matriz de prueba simetrica
+matrizSimetricaPrueba = [
+    [1,2,3],
+    [2,4,5],
+    [3,5,6]
+]
+
+#matriz de prueba desordenada
 matrizDesordenada = [
     [5,2,6,1],
     [9,7,5,3],
@@ -13,8 +28,22 @@ matrizDesordenada = [
     [8,1,9,2]
 ]
 
+#matriz capicua 
+matrizCapicua = [
+    [1,5,6,4],
+    [2,3,4,8],
+    [0,0,0,0],
+    [2,3,4,5],
+    [1,5,6,4]
+]
+
 #funcion A
-def cargarNumerosEnterosMatriz(matriz): 
+def cargarNumerosEnterosMatriz(): 
+    n = int(input("Ingrese la dimension de la matriz (numero entero mayor a 1) "))
+    while n < 2: 
+        n = int(Input("Ingrese la dimension de la matriz (numero entero mayor a 1) "))    
+    matriz = [[0] * n for i in range(n)]
+    print(matriz)
     filas = len(matriz)
     columnas = len(matriz[0])
     for f in range(filas): 
@@ -23,6 +52,8 @@ def cargarNumerosEnterosMatriz(matriz):
             while n < 1: 
                 n = int(input("Ingrese el entero que desea agregar a la lista"))
             matriz[f][c] = n
+    
+    return matriz
 
 #funcion B, ordenando de forma ascendente fila a fila
 def ordenarMatrizAscendente(matriz): 
@@ -110,3 +141,49 @@ def calcularPorcImp(matriz,columna):
     print(porcImpares)
 
 #funcion h, matriz simetrica con respecto a su diagonal principal 
+def verificarSimetriaPrincipal(matriz): 
+    filas = len(matriz)
+    columnas = len(matriz[0])
+    simetria = True
+    for f in range(filas): 
+        for c in range(columnas): 
+            if matriz[f][c] == matriz[c][f]: 
+                continue
+            else: 
+                simetria = False
+    return simetria
+
+#funcion i, matriz simetrica con respecto a su diagonal secundaria 
+def verificarSimetriaSecundaria(matriz): 
+    n = len(matriz) 
+    simetria = True
+    for f in range(n):
+        for c in range(n): 
+            print(n - c -1)
+            if matriz[f][c] != matriz[n - f - 1][n - c - 1]: 
+                simetria = False
+                break
+        if not simetria: 
+            break
+    return simetria
+
+verificar = verificarSimetriaSecundaria(matrizSimetricaPruebaSecundaria)
+if verificar: 
+    print("simetria ")
+else: 
+    print("asimetria ")
+
+#funcion j, determinar columnas capicuas 
+def determinarColumnasCapicua(matriz):
+    capicua = True 
+    columnasCapicua = []
+    n = len(matriz) // 2
+    for f in range(n): 
+        for c in range(n): 
+            if matriz[f][c] == matriz[-f][-c]: 
+                columnasCapicua.append() 
+                break
+            else: 
+
+    return capicua
+
