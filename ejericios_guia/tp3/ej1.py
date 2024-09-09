@@ -41,7 +41,7 @@ matrizCapicua = [
 def cargarNumerosEnterosMatriz(): 
     n = int(input("Ingrese la dimension de la matriz (numero entero mayor a 1) "))
     while n < 2: 
-        n = int(Input("Ingrese la dimension de la matriz (numero entero mayor a 1) "))    
+        n = int(inputnput("Ingrese la dimension de la matriz (numero entero mayor a 1) "))    
     matriz = [[0] * n for i in range(n)]
     print(matriz)
     filas = len(matriz)
@@ -175,17 +175,21 @@ else:
 
 #funcion j, determinar columnas capicuas 
 def determinarColumnasCapicua(matriz):
-    capicua = True 
     columnasCapicua = []
     n = len(matriz) // 2
     for f in range(n): 
+        capicua = True 
         for c in range(n): 
-            if matriz[f][c] == matriz[-f][-c]: 
-                columnasCapicua.append() 
-                break
+            if matriz[f][c] != matriz[-f][-c]:  
+                capicua = False
             
+        if capicua == True: 
+            for c in range(n): 
+                columnasCapicua.append([])
 
     return capicua
+
+def
 
 #nunca romper un bucle si no es necesario, seguir el ciclo original 
 #nigun volumen de datos se almacena en memoria 
