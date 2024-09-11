@@ -141,3 +141,7 @@ cad2 = cad1.rjust(10,'-') #lo mismo pero al reves
 n = 3 
 cad = str(n).zfill(5)
 print(cad)
+
+cad = "10"
+lol = cad.zfill(10) #si lo pisas no funciona, tenes que crear una variable nueva
+print(lol) #zfill agrega ceros a la izquierda hasta que la cadena tenga la longitud especificada en el parentesis
