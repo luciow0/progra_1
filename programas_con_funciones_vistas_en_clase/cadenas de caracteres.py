@@ -153,3 +153,33 @@ cad = "---Hola-Mundo-----"
 cad = cad.lstrip("-")
 print(cad)
 
+# <cadena>.rstrip(<str>)
+#devuelve una cadena sin los caracteres ndicados en str al final de la cadena
+cad = "---Hola-Mundo---" #lo mismo que la anterior pero del lado derecho
+cad = cad.rstrip("-")
+print(cad)
+
+#<cadena>.strip(<str>) 
+#devuelve una cadena sin los caracteres indicados en str al inicio y al final de la cadena 
+cad = "---Hola-Mundo---"
+cad = cad.strip("-")
+print(cad) #en este caso se conservaria el '-' del medio ya que solo afecta al inicio y fin de la cadena 
+
+#--------------------
+
+#FORMATO 
+
+# %formato
+# <str>.format(<datos>)
+legajo = 11212
+nombre = "Maria"
+nota = 10
+
+#Formato con % disponible a partir de python 2.6
+print("legajo: %d Nombre: %d, Nota: %d" %(legajo,nombre,nota))
+
+#Metodo format ()
+print("Legajo:{} Nombre:{} Nota:{}".format(legajo,nombre,nota))
+
+#f string PEP498, el prefijo f te permite dar formato a una cadena de caracteres, por ejemplo
+print(f"Legajo: {legajo} Nombre: {nombre} Nota: {nota}")
