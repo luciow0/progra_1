@@ -129,19 +129,27 @@ cad2 = cad1.center(30,'-') # osea, alarga la cadena, agregando los elementos que
                           # si le pasas un ancho menor al de la palabra, directamente no hace nada 
                           # si el numero que pones de ancho es impar, agrega mas del lado izquierod (inicio)
 print(cad2)
-
+ 
+#ljust 
 cad1 = "Hola"          # deja la palabra del lado izquierdo y agrega al derecho 
 cad2 = cad1.ljust(10,'-') 
 
+#rjust
 cad1 = "hola"
 cad2 = cad1.rjust(10,'-') #lo mismo pero al reves
 
-# <cadena>.zfill(<ancho>)
-
+#zfill
 n = 3 
 cad = str(n).zfill(5)
 print(cad)
-
 cad = "10"
 lol = cad.zfill(10) #si lo pisas no funciona, tenes que crear una variable nueva
 print(lol) #zfill agrega ceros a la izquierda hasta que la cadena tenga la longitud especificada en el parentesis
+
+#lstrip <cadena>.lstrip(<str>)
+#devuelve una cadena sin los caracteres indicados en str al inicio de la 
+#es como que 'estripa' el caracter que le indiques, en este caso a la izuquierda (left)
+cad = "---Hola-Mundo-----"
+cad = cad.lstrip("-")
+print(cad)
+
