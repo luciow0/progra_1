@@ -50,3 +50,31 @@ Datos de Salida:
 3) (VALOR 2 PUNTOS) Utilizar la técnica de listas por comprensión para construir una lista con todos los
 números impares comprendidos entre 100 y 200
 """
+
+import random 
+
+def generarModelosRandom(): 
+    modelos = []
+    artefactos = []
+    while len(modelos) < 100: 
+        aux = random.randint(100,999)
+        if aux not in modelos: 
+            modelos.append(aux)
+        aux = random.randint(1,3)
+        artefactos.append(aux)
+
+    print(modelos)
+    print()
+    print(artefactos)
+
+def busquedaMod(modelo):
+    pass
+
+# ya entendi  
+
+def cargarCantidadDeModelos(): 
+    
+    codigoDeModelo = int(input("Ingrese el codigo de modelo de producto que desea cargar"))
+    #while codigoDeModelo
+
+generarModelosRandom()
