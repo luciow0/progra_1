@@ -17,6 +17,10 @@ numerosEnLetras = [
     'noventa y nueve'
 ]
 
+#100,000,000,0000 1 billon
+
+#
+
 def convertirNumero(entero, numerosEnLetras):
     nuemeroString = '' 
     if entero >= 1000000000000: 
@@ -24,6 +28,15 @@ def convertirNumero(entero, numerosEnLetras):
         inicio = inicio[0]
         inicio = int(inicio)
         string = numerosEnLetras[inicio]
-        nuemeroString += (string + ' ' + 'billon/es')
+        nuemeroString += (string + ' ' + 'billon/es') #manejar caso del uno
         print(nuemeroString)
+
+    elif entero > 1000000: 
+        inicio = str(entero)
+        inicio = inicio[0]
+        inicio = int(inicio)
+        string = numerosEnLetras[inicio]
+        nuemeroString += (string + ' ' + 'millon/es') #manejar caso del uno
+        print(nuemeroString)
+
 check = convertirNumero(5000000000000, numerosEnLetras)
