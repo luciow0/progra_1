@@ -6,7 +6,7 @@ def devolverCadena(cadena, n):
     
     return subCadena
 
-cadenaPrueba = "mcs desconformes, para ser feliz faltan años"
+cadenaPrueba = "La lluvia cae suavemente sobre las hojas verdes."
 n = int(input("Ingrese la cantitdad de caracteres que desea crear la nueva cadena que empieza desde el final no se es medio raro de explicar "))
 check = devolverCadena(cadenaPrueba, n)
 print(check)

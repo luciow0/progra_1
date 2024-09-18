@@ -7,7 +7,7 @@ cadena = "Ojala gargajo bajo conseguir trabajo el año que viene me gustaria muc
 
 palabra = 'trabajo'
 
-reemplazo = 'MERCA'
+reemplazo = 'gato'
 
 check = remplazarPalabras(cadena, palabra, reemplazo)[0]
 

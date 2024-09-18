@@ -1,4 +1,4 @@
-cadenaPrueba = "Aveces siento como si no se, amigo esto va a github desp mira si alguien lo ve"
+cadenaPrueba = "Esta tarde iremos a pasear por la playa. Mi perro siempre juega con su pelota roja."
 
 # solucion usando slicing
 def extraerSubcadena(cadena): 

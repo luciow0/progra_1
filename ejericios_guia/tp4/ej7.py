@@ -1,4 +1,4 @@
-cadenaPrueba = "Aveces siento como si no se, amigo esto va a github desp mira si alguien lo ve"
+cadenaPrueba = "El tren llegó a la estación a tiempo hoy."
 
 # solucion usando slicing
 def eliminarSubcadena(cadena): 

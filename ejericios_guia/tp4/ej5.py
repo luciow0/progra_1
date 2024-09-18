@@ -1,6 +1,6 @@
 import re 
 
-cadena = "aveces pienso que redondo deberia dejar de ser tan mogolico 5"
+cadena = "El gato negro duerme en el sillón cómodo 5"
 
 #solucion 1, solo bucles
 def filtrarPalabras(cadena):
@@ -43,7 +43,7 @@ def filtrarPalabras2(cadena):
 
 #solucion 3, funcion filter
 def esMayor(string): 
-    cadena = "aveces pienso que redondo deberia dejar de ser tan mogolico 5"
+    cadena = "Mañana iremos al parque a jugar fútbol. 5"
     primer_numero = re.search(r'\d+', cadena)
     if primer_numero:
         n = (int(primer_numero.group())) 

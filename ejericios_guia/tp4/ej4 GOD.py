@@ -45,10 +45,10 @@ def convertirNumeroAlista(numeroEntero):
     valor = int(valor)
 
     listaNum.pop(0)
-    if len(listaNum) > 0:
-        if listaNum[0] == '0': 
-            listaNum.pop(0)
-    
+
+    while len(listaNum) > 0 and listaNum[0] == '0':
+        listaNum.pop(0) 
+
     numeroEntero = convertirListaAnumero(listaNum, numeroEntero)
 
     return valor, tipo, numeroEntero
