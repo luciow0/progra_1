@@ -64,7 +64,7 @@ L2 = L1[:] COPIAS TODA LA LISTA
 
 ------------------------------------------------------- -------------------------------------------------------------------------------------
 
-LISTAS POR COMPRENSION -> CON REBANADAS
+LISTAS POR COMPRENSION 
 
 L = [X**2 for X in range (5)]
 l = [elemento (lista, variable, operacion) for i in range(x)]
