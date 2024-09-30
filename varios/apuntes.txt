@@ -163,3 +163,35 @@ esta instruccion RAISE tambien puede utilizarse para relanzar la ultima excepcio
 
 intruccion assert: evalua una condicion, si da verdadero, no levanta ninguna excepcion, si da false levanta una excepcion del tipo AssertionError
 alternativa al if para hacer una comparacion que termine con un true or false
+
+EXCEPCIONES 
+
+1. **IndexError**: Ocurre cuando se intenta acceder a un índice fuera del rango en una lista o secuencia.
+   
+2. **NameError**: Aparece cuando se intenta usar una variable o función que no ha sido definida.
+   
+3. **ValueError**: Se lanza cuando una función recibe un argumento con el tipo correcto pero con un valor inapropiado.
+   
+4. **ZeroDivisionError**: Ocurre cuando se intenta dividir un número por cero.
+   
+5. **SyntaxError**: Surge cuando el código contiene errores de sintaxis que impiden su compilación.
+   
+6. **IndentationError**: Se lanza cuando el código tiene problemas de indentación, lo que afecta la estructura.
+   
+7. **TypeError**: Aparece cuando una operación se realiza sobre tipos incompatibles.
+   
+8. **AttributeError**: Se produce cuando se intenta acceder a un atributo o método que no existe en un objeto.
+   
+9. **AssertionError**: Ocurre cuando una declaración `assert` falla porque su condición evaluada es falsa.
+   
+10. **IOError**: Se lanza cuando ocurre un error de entrada/salida, como la lectura o escritura de un archivo fallida.
+   
+11. **KeyError**: Aparece cuando se intenta acceder a una clave inexistente en un diccionario.
+   
+12. **KeyboardInterrupt**: Se lanza cuando el usuario interrumpe la ejecución de un programa (generalmente con Ctrl+C).
+   
+13. **MemoryError**: Ocurre cuando el programa no puede asignar más memoria.
+   
+14. **ModuleNotFoundError**: Se lanza cuando se intenta importar un módulo que no puede ser encontrado.
+   
+15. **RecursionError**: Ocurre cuando se excede el límite de recursión máxima permitido por el intérprete de Python.

@@ -4,7 +4,7 @@
 # Devolver True o False según la fecha sea correcta o no.
 # Realizar también un programa para verificar el comportamiento de la función.
 
-import verSiEsBisiesto 
+import varios.verSiEsBisiesto as verSiEsBisiesto 
 
 def verificarFecha(dia,mes,año): 
     print(dia,mes,año)
