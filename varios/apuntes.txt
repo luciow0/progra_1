@@ -71,3 +71,95 @@ l = [elemento (lista, variable, operacion) for i in range(x)]
 l = [elemento for elemento in lista if elemento >= 0] --> FILTRO 
 condicional dentro de la lista puede contener tanto if como else 
 
+
+----------------------------------------------------------------------------------------------------
+segunda parte de la materia 
+
+-> instruccion break, continue 
+-> clausula else 
+-> while true 
+-> intruccion pass
+
+formas de romper un bucle (while o for) -> continue, break 
+
+continue: rompe la iteracion en curso, no rompe el ciclo, pasa a la siguiente iteracion, 
+sirve tanto para for como para while.
+
+IMPORTANTE -> si tengo que romper un ciclo for deberia haber usado un ciclo while
+
+break: finaliza el ciclo completo 
+
+//////////////////////////////////////////////////////////
+
+FOR - WHILE - ELSE -> PUEDEN TENER ASOCIADO UN ELSE, TODO LO QUE ESTE EN EL ELSE SE VA A EJECUTAR SI EL CICLO SE FINALIZA DE MANERA NORMAL 
+
+ES DECIR, EL ELSE SE VA A EJECUTAR SI EL CICLO TERMINA DE FORMA NATURAL 
+
+SI EL BUCLE SE ROMPE CON UN BREAK NO SE EJECUTA 
+
+TE AHORRAS UN TREMENDO CHOCLO USANDO EL ELSE 
+
+CON EL CONTINUE HAY QUE PROBAR 
+
+/////////////////////////////////////////////////////////////////
+
+while true, ciclo infinito a menos que exista una condicion que rompa el bucle 
+
+BUENA PRACTICA: NO FUERCES HACER COSAS QUE NO TIENEN SENTIDO 
+
+
+//////////////////////////////////////////////////////////////////
+
+try: bloque protegido, dentro de este bloque van las instrucciones con potenciales errores 
+
+las excepciones en python estan agrupadas por jerarquia 
+
+hay excepciones genericas 
+
+excepciones comunes:
+IndexError
+NameError
+ValueError
+ZeroDivisionError
+SyntaxError
+IdentationError
+TypeError
+AtributeError
+
+otras: 
+AssertionError
+IdentationError
+KeyError
+KeyboardInterrupt
+MemoryError
+ModuleNotFoundError
+RecursionError
+
+Se ejecuta primero el bloque protegido.
+Si se produce algún error durante la ejecución del 
+mismo, se pasa automáticamente al bloque except que 
+corresponda a la excepción generada.
+Si no se produce ningún error, el bloque except es 
+ignorado.
+El bloque try-except puede tener tantos except como 
+sea necesario, sin repetir ningún tipo de excepción.
+
+el except puede no estar seguido de un tipo de excepcion, en cuyo caso capturara cualquier excepcion generada
+
+es posible capturar el mensaje de error asociado a la excepcion con la instruccion as 
+
+
+TRY EXCEPT ELSE 
+
+se puede poner un else despues del except, solo se va a ejecutar si no se lanzo la excepcion
+
+FINALLY se pone al final para ejecutar codigo sin importar si sale o no la excepcion
+
+-----------------
+
+raise: fuerza la ejecucion de una interrupcion 
+
+esta instruccion RAISE tambien puede utilizarse para relanzar la ultima excepcion producida 
+
+intruccion assert: evalua una condicion, si da verdadero, no levanta ninguna excepcion, si da false levanta una excepcion del tipo AssertionError
+alternativa al if para hacer una comparacion que termine con un true or false
