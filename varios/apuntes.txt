@@ -195,3 +195,85 @@ EXCEPCIONES
 14. **ModuleNotFoundError**: Se lanza cuando se intenta importar un módulo que no puede ser encontrado.
    
 15. **RecursionError**: Ocurre cuando se excede el límite de recursión máxima permitido por el intérprete de Python.
+
+
+        CHATGPT BASANDO EXCEPCIONES: 
+
+El manejo de excepciones debe centrarse en:
+
+1. Previsión de excepciones comunes: Es fundamental cubrir las excepciones que sabes que pueden ocurrir, 
+como errores de E/S (entrada/salida), de red, o errores de tipo al trabajar con datos.
+
+2. Evitar excepciones generales: Utilizar un bloque except Exception para capturar todas las excepciones
+es una mala práctica si no se maneja adecuadamente,
+ya que puede ocultar errores que no habías previsto. Es mejor ser específico.
+
+3. No atrapar excepciones que no puedas manejar: Solo captura las excepciones que tienes un plan para manejar. 
+Si no puedes recuperar el estado del programa tras una excepción, 
+es mejor dejar que el error sea lanzado.
+
+4. Validación y prevención: Muchas excepciones se pueden evitar con una correcta validación de datos
+antes de ejecutar operaciones arriesgadas, lo que reduce la necesidad de manejar excepciones.
+
+5. Registro de errores: En caso de excepciones inesperadas, 
+es útil registrarlas para que puedas revisarlas y mejorarlas en el futuro
+
+El objetivo es anticipar y manejar los errores más probables y críticos, sin atrapar indiscriminadamente todas las excepciones.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+  
+        PYTHON ZEN
+
+    Bello es mejor que feo.
+    Explícito es mejor que implícito.
+    Simple es mejor que complejo.
+    Complejo es mejor que complicado.
+    Plano es mejor que anidado.
+    Espaciado es mejor que denso.
+    La legibilidad es importante.
+    Los casos especiales no son lo suficientemente especiales como
+    para romper las reglas.
+
+--------------------------------------------------------------------------------------------------------------------
+ARCHIVOS 
+
+cada linea de texto en un archivo de texto plano (sin formato) es un 'REGISTRO'
+
+APERTURA
+TODO ARCHIVO DEBE SER ABIERTO PREVIO A SER UTILIZADO
+<variable> = open(file, mode='r')
+arch = open(“datos.txt”)
+arch = open(“datos.txt”, mode=‘rt’)
+arch = open(“c:\\nuevo\\datos.txt”, mode=‘rt’)
+arch = open(r“c:\nuevo\datos.txt”, mode=‘rt’)
+
+mode: indica el modo de apertura del archivo, por
+default es modo lectura de un archivo de texto
+Primer Caracter:
+w: escritura
+r: lectura
+Segundo Caracter:
+t: texto
+b: binario
+
+Si no se logra abrir el archivo produce un error del
+tipo IOError
+
+CIERRE
+TODO ARCHIVO SE DEBE CERRAR, se suele utilizar
+En finally para asegurar su ejecución
+<arch>.close()
+
+PROCESO: escritura
+Realizar grabaciones sobre el archivo.
+El salto de línea se debe agregar a la cadena
+<arch>.write(<cadena>)
+Graba la <cadena> en el archivo.
+SE DEBE AGREGAR EL SALTO DE LINEA
+
+modo lectura: abre el archivo en modo entrada 
+
+modo escritura: abre el archivo en modo salida, si el archivo no existe lo va a crear, si ya existe, lo destruye y sobrescribe
+
+modo append: abre el archivo en modo salida, si el archivo no existe lo crea, si ya existe, agrega registros al final del archivo 
+
