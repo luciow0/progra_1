@@ -277,3 +277,24 @@ modo escritura: abre el archivo en modo salida, si el archivo no existe lo va a 
 
 modo append: abre el archivo en modo salida, si el archivo no existe lo crea, si ya existe, agrega registros al final del archivo 
 
+si la apertura del objeto es correcta, nos va a devolver un objeto asignado en la variable 
+
+todo archivo debe abrirse siempre en un bloque protegido 
+
+ERRORES CON ARCHIVOS: 
+    nombre invalido 
+    archivo inexistente 
+    disco lleno 
+    disco protegido contra escritura 
+    permisos insuficientes 
+    archivos en uso 
+
+
+tanto la apertura como el cierre de los archivos debe hacerse dentro de un bloque protegido 
+
+
+PROCESAMIENTO DE ARCHIVOS: (dos modos de grabacion)
+
+<arch>.write(str) 
+
+<arch>.writelines(lista) -------> este metodo internamente tiene un for adentro que recorre la lista grabando todas las lineas 
