@@ -16,89 +16,91 @@ def guardarApellidos():
     except IOError: 
         print("El archivo nombres y apellidos no se pudo abrir correctamente ")
 
-    linea = arch.readline()
-
-    while linea: 
-        apellido, nombre = linea.split(",")
-        apellido = apellido.upper()
-        armenio = True
-        while armenio: 
-            if apellido[-1] != "N": 
-                armenio = False
-            if apellido[-2] != "A": 
-                armenio = False
-            if apellido[-3] != "O": 
-                armenio = False
-
-        if armenio: 
-            try: 
-                archivoArmenia = open("/home/luciowo/progra_1/ejericios_guia/tp6/ej1/ARMENIA.txt", mode = 'wt')
-            except IOError: 
-                print("No se pudo abrir el archivoArmenia con exito ")
-            
-            else: 
-                archivoArmenia.write(linea + "\n")
-                try: 
-                    archivoArmenia.close()
-                except IOError: 
-                    print("El arhcivoArmenia no se pudo cerrar ")
-
-    #########################################################################################
-
-        italiano = True
-        while italiano: 
-            if apellido[-1] != "I": 
-                italiano = False
-            if apellido[-2] != "A": 
-                italiano = False
-            if apellido[-3] != "N": 
-                italiano = False
-
-        if italiano: 
-            try: 
-                archivoItalia = open("/home/luciowo/progra_1/ejericios_guia/tp6/ej1/ITALIA.txt", mode = 'wt')
-            except IOError: 
-                print("No se pudo abrir el archivoItalia con exito ")
-            
-            else: 
-                archivoItalia.write(linea + "\n")
-                try: 
-                    archivoItalia.close()
-                except IOError: 
-                    print("El archivoItalia no se pudo cerrar correctamente")
-
-    #######################################################################################
-
-        español = True
-        while español: 
-            if apellido[-1] != "N": 
-                español = False
-            if apellido[-2] != "A": 
-                español = False
-            if apellido[-3] != "O": 
-                español = False
-
-        if español: 
-            try: 
-                archivoEspaña = open("/home/luciowo/progra_1/ejericios_guia/tp6/ej1/ESPAÑA.txt", mode = 'wt')
-            except IOError: 
-                print("No se pudo abrirEspaña el archivo con exito ")
-            
-            else: 
-                archivoEspaña.write(linea + "\n")
-                try: 
-                    archivoEspaña.close()
-
-                except IOError: 
-                    print("El archivoEspaña no se pudo cerrar correctamente")
+    else: 
 
         linea = arch.readline()
 
-    else: 
-        try: 
-            arch.close()
-        except IOError: 
-            print("El archivo nombres y apellidos no se pudo cerrar correctamente ")
+        while linea: 
+            apellido, nombre = linea.split(",")
+            apellido = apellido.upper()
+            armenio = True
+            while armenio: 
+                if apellido[-1] != "N": 
+                    armenio = False
+                if apellido[-2] != "A": 
+                    armenio = False
+                if apellido[-3] != "O": 
+                    armenio = False
+
+            if armenio: 
+                try: 
+                    archivoArmenia = open("/home/luciowo/progra_1/ejericios_guia/tp6/ej1/ARMENIA.txt", mode = 'wt')
+                except IOError: 
+                    print("No se pudo abrir el archivoArmenia con exito ")
+                
+                else: 
+                    archivoArmenia.write(linea + "\n")
+                    try: 
+                        archivoArmenia.close()
+                    except IOError: 
+                        print("El arhcivoArmenia no se pudo cerrar ")
+
+        #########################################################################################
+
+            italiano = True
+            while italiano: 
+                if apellido[-1] != "I": 
+                    italiano = False
+                if apellido[-2] != "A": 
+                    italiano = False
+                if apellido[-3] != "N": 
+                    italiano = False
+
+            if italiano: 
+                try: 
+                    archivoItalia = open("/home/luciowo/progra_1/ejericios_guia/tp6/ej1/ITALIA.txt", mode = 'wt')
+                except IOError: 
+                    print("No se pudo abrir el archivoItalia con exito ")
+                
+                else: 
+                    archivoItalia.write(linea + "\n")
+                    try: 
+                        archivoItalia.close()
+                    except IOError: 
+                        print("El archivoItalia no se pudo cerrar correctamente")
+
+        #######################################################################################
+
+            español = True
+            while español: 
+                if apellido[-1] != "N": 
+                    español = False
+                if apellido[-2] != "A": 
+                    español = False
+                if apellido[-3] != "O": 
+                    español = False
+
+            if español: 
+                try: 
+                    archivoEspaña = open("/home/luciowo/progra_1/ejericios_guia/tp6/ej1/ESPAÑA.txt", mode = 'wt')
+                except IOError: 
+                    print("No se pudo abrirEspaña el archivo con exito ")
+                
+                else: 
+                    archivoEspaña.write(linea + "\n")
+                    try: 
+                        archivoEspaña.close()
+
+                    except IOError: 
+                        print("El archivoEspaña no se pudo cerrar correctamente")
+
+            linea = arch.readline()
+
+        else: 
+            try: 
+                arch.close()
+            except IOError: 
+                print("El archivo nombres y apellidos no se pudo cerrar correctamente ")
 
 
 

@@ -30,48 +30,50 @@ def dividirArchivos():
     except IOError: 
         print("El archivo no se pudo abrir correctamente ")
 
-    linea = arch.readline()
-    while linea: 
-        cantLineas += 1
-        print("va por aca")
-        linea = arch.readline()
-
-    try: 
-        arch.close()
-    except IOError: 
-        print("el archivo no se pudo cerrar correctamente ")
-    
-    cantArchivos = cantLineas / registrosMax
-    if type(cantArchivos) == float: 
-        int(cantArchivos)
-        cantArchivos += 1
-    
-    #----------#
-
-    arch = open("/home/luciowo/progra_1/ejericios_guia/tp6/ej2/archivoLeer.txt", mode = 'rt')
-    contadorArchivos = 1
-    while contadorArchivos <= cantArchivos:
-        nombre_archivo = f"parte_{contadorArchivos}.txt"
-        contadorRegistros = 1
-        while contadorRegistros <= registrosMax:
-            try:
-                open(nombre_archivo)
-                archivoEscribir = open(nombre_archivo, 'wt') 
-            except IOError: 
-                print(f"el archivo {nombre_archivo} no se pudo abrir correctamente ")    
-            else: 
-                linea = arch.readline()
-                archivoEscribir.write(linea)
-                contadorRegistros += 1
-
-        contadorArchivos += 1
-
     else: 
+
+        linea = arch.readline()
+        while linea: 
+            cantLineas += 1
+            print("va por aca")
+            linea = arch.readline()
+
         try: 
             arch.close()
-            print("fin de el programa")
         except IOError: 
-            print("El archivo no se pudo cerrar correctamente")
+            print("el archivo no se pudo cerrar correctamente ")
+        
+        cantArchivos = cantLineas / registrosMax
+        if type(cantArchivos) == float: 
+            int(cantArchivos)
+            cantArchivos += 1
+        
+        #----------#
+
+        arch = open("/home/luciowo/progra_1/ejericios_guia/tp6/ej2/archivoLeer.txt", mode = 'rt')
+        contadorArchivos = 1
+        while contadorArchivos <= cantArchivos:
+            nombre_archivo = f"parte_{contadorArchivos}.txt"
+            contadorRegistros = 1
+            try:
+                archivoEscribir = open(nombre_archivo, 'wt') 
+            except IOError: 
+                print(f"el archivo {nombre_archivo} no se pudo abrir correctamente ")
+            else:
+                    
+                while contadorRegistros <= registrosMax:
+                    linea = arch.readline()
+                    archivoEscribir.write(linea)
+                    contadorRegistros += 1
+                archivoEscribir.close()
+                contadorArchivos += 1
+
+        else: 
+            try: 
+                arch.close()
+                print("fin de el programa")
+            except IOError: 
+                print("El archivo no se pudo cerrar correctamente")
 
 
 dividirArchivos()
