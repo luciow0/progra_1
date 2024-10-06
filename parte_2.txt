@@ -1,0 +1,15 @@
+es una habilidad vital en esta industria, dado que los proyectos de  
+software suelen requerir la colaboración entre distintos especialistas.  
+Es importante conocer buenas prácticas en la gestión del código,  
+como el uso adecuado de sistemas de control de versiones y la  
+documentación clara. Estar familiarizado con metodologías ágiles  
+puede mejorar significativamente la productividad y la calidad del  
+producto final. En un entorno laboral, el tiempo es un recurso  
+limitado, por lo que optimizar procesos y saber priorizar tareas  
+también es fundamental para garantizar el éxito de cualquier  
+proyecto.
+en este texto, chatgpt considero como palabras los puntos y las comas 
+y aunque se lo pedi dos veces, no alcanzo el numero de lineas que le solicite
+que eran 30, primero hizo un texto de 20 y luego uno de 25
+pero la cantidad de palabras esta bien, contando los puntos y las comas cumple 
+con las 11 palabras por linea, a excpecion de la ultima que es una sola 'proyecto'
