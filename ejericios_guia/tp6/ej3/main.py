@@ -47,13 +47,14 @@ def grabarAlturas():
     disciplina = input("Ingrese la disciplina de los atletas -1 para finalizar ")
     while disciplina != -1: 
         
-        disciplina = disciplina.upper
+        disciplina = disciplina.upper()
         archivoAbierto.write("DISCIPLINA: " + disciplina + "\n")
         print("ingrese la altura de los atletas, -1 para finalizar con esta disciplina")
         numero = validarNumero()
         while numero != -1:
+            numero = str(numero)
             linea = "Altura: "+ numero+ "\n"
-            str(linea)
+            #str(linea)
             archivoAbierto.write(linea)
             numero = validarNumero()
 
