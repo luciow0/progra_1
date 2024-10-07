@@ -1,9 +1,6 @@
-DISCIPLINA: BASQUET
-Promedio de alturas deporte BASQUET: 1.54
+DISCIPLINA: LOL
+Promedio de alturas deporte LOL: 1.66
 ...
-DISCIPLINA: POLO
-Promedio de alturas deporte POLO: 1.5866666666666667
-...
-DISCIPLINA: FUTBOL
-Promedio de alturas deporte FUTBOL: 1.6233333333333333
+DISCIPLINA: A
+Promedio de alturas deporte A: 1.6966666666666665
 ...

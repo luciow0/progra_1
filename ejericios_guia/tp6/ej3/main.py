@@ -123,6 +123,8 @@ def grabarPromedio(archivoAlturas):
 def mostrarMasAltos(archivoPromedios): 
     listaDisciplinas = []
     listaPromediosDisciplinas = []
+    alturasDisciplina = 0
+    atletasTotal = 0
     try: 
         archivoPromediosAbierto = open(archivoPromedios, mode = 'rt')
     except IOError: 
@@ -144,7 +146,7 @@ def mostrarMasAltos(archivoPromedios):
                 continue
             else: 
                 texto, altura = linea.strip().split(":")
-                alturasDisciplina += altura
+                alturasDisciplina += float(altura)
                 atletasTotal += 1
                 linea = archivoPromediosAbierto.readline()
     
@@ -156,7 +158,7 @@ def mostrarMasAltos(archivoPromedios):
     promedioAlturasDisciplinas = promediosTotal / cantidadDisciplinas
     for i in range(len(listaPromediosDisciplinas)): 
         if listaPromediosDisciplinas[i] > promedioAlturasDisciplinas: 
-            print("La altura promedio del deporte ", listaDisciplinas[i], "es mayor a la altura promedio de todas las disciplinas, ", promedioAlturasDisciplinas)
+            print(f"La altura promedio del deporte{listaDisciplinas[i]} es mayor a la altura promedio de todas las disciplinas {promedioAlturasDisciplinas:.2f}")
                 
 
 archivoAlturas = grabarAlturas()
