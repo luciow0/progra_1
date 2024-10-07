@@ -1,2 +1,15 @@
-DISCIPLINA: A
-Altura: 1.2
+DISCIPLINA: BASQUET
+Altura del atleta 1: 1.54
+Altura del atleta 2: 1.76
+Altura del atleta 3: 1.32
+...
+DISCIPLINA: POLO
+Altura del atleta 1: 1.54
+Altura del atleta 2: 1.99
+Altura del atleta 3: 1.23
+...
+DISCIPLINA: FUTBOL
+Altura del atleta 1: 1.77
+Altura del atleta 2: 1.99
+Altura del atleta 3: 1.11
+...

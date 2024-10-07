@@ -9,7 +9,7 @@
 # <Deporte 1>
 # <altura del atleta 1>
 # <altura del atleta 2>
-# < . . . >
+# < . . . > 
 # <Deporte 2>
 # <altura del atleta 1>
 # <altura del atleta 2>
@@ -30,7 +30,7 @@
 def validarNumero():
     while True: 
         try: 
-            numero = float(input("Ingrese la altura del atleta "))
+            numero = float(input("Ingrese la altura del atleta, -1 para finalizar "))
             break
         except ValueError: 
             print("por favor ingrese un numero ")
@@ -43,26 +43,122 @@ def grabarAlturas():
         archivoAbierto = open(archivoAlturas, mode= 'wt')
     except IOError: 
         print("El archivo de alturas no se pudo abrir con exito ")
+    else:
 
-    disciplina = input("Ingrese la disciplina de los atletas -1 para finalizar ")
-    while disciplina != -1: 
-        
-        disciplina = disciplina.upper()
-        archivoAbierto.write("DISCIPLINA: " + disciplina + "\n")
-        print("ingrese la altura de los atletas, -1 para finalizar con esta disciplina")
-        numero = validarNumero()
-        while numero != -1:
-            numero = str(numero)
-            linea = "Altura: "+ numero+ "\n"
-            #str(linea)
-            archivoAbierto.write(linea)
+        disciplina = input("Ingrese la disciplina de los atletas -1 para finalizar: ")
+        while disciplina != "-1": 
+            
+            disciplina = disciplina.upper()
+            archivoAbierto.write("DISCIPLINA: " + disciplina + "\n")
+            print("ingrese la altura de los atletas, -1 para finalizar con esta disciplina")
             numero = validarNumero()
+            numeroAtleta = 0
+            while numero != -1:
+                numeroAtleta += 1
+                numero = str(numero)
+                linea = f"Altura del atleta {numeroAtleta}: "+ numero+ "\n"
+                archivoAbierto.write(linea)
+                numero = validarNumero()
+            archivoAbierto.write("..." + "\n")  
+            disciplina = input("Ingrese la siguiente disciplina, -1 para finalizar: ")
+        
+        try: 
+            archivoAbierto.close()
+        except IOError: 
+            print("El archivo de alturas no se pudo cerrar con exito")
 
-        disciplina = input("Ingrese la siguiente disciplina ")
-    
+    return archivoAlturas
+
+
+def grabarPromedio(archivoAlturas):
+    archivoPromedios = "promedios.txt"
+    cantLineas = 0
+    alturasTotal = 0
+    try: 
+        archivoPromediosAbierto = open(archivoPromedios, mode = 'wt')
+    except IOError: 
+        print("No se pudo abrir el archivo de promedios ")
+    else: 
+        try:  
+            archivoAbierto = open(archivoAlturas, mode = 'rt')
+        except IOError: 
+            print("El archivo no se pudo abrir con exito en la funcion grabar promedio ")
+        else: 
+            
+            linea = archivoAbierto.readline()
+            while linea: 
+                    if "DISCIPLINA" in linea: 
+                        archivoPromediosAbierto.write(linea)
+                        palabra, deporte = linea.strip().split(":")
+                        linea = archivoAbierto.readline()
+                        continue
+                    else:         
+                        if "..." in linea:
+                            promedio = alturasTotal / cantLineas
+                            archivoPromediosAbierto.write("Promedio de alturas deporte"+ deporte+": "+ str(promedio) + "\n")
+                            archivoPromediosAbierto.write(linea)
+                            promedio = 0
+                            cantLineas = 0
+                            alturasTotal = 0
+                            linea = archivoAbierto.readline()
+                            continue
+                        else:
+                            texto, altura = linea.strip().split(":")
+                            altura = float(altura)
+                            cantLineas += 1
+                            alturasTotal += altura
+                       
+                    linea = archivoAbierto.readline()
     try: 
         archivoAbierto.close()
     except IOError: 
-        print("El archivo de alturas no se pudo cerrar con exito")
+        print("No se pudo cerrar el archivo de alturas ")
+    try: 
+        archivoPromediosAbierto.close()
+    except IOError: 
+        print("No se pudo cerrar el archivo de alturas promedio")
 
-grabarAlturas()
+    return archivoPromedios
+
+def mostrarMasAltos(archivoPromedios): 
+    listaDisciplinas = []
+    listaPromediosDisciplinas = []
+    try: 
+        archivoPromediosAbierto = open(archivoPromedios, mode = 'rt')
+    except IOError: 
+        print("El archivo promedios en la funcion mostrarMasAltos no se pudo abrir correctamente ")
+    else: 
+        linea = archivoPromediosAbierto.readline()
+        while linea: 
+            if "DISCIPLINA" in linea: 
+                palabra, disciplina = linea.strip().split(":") 
+                listaDisciplinas.append(disciplina)
+                linea = archivoPromediosAbierto.readline()
+                continue
+            elif "..." in linea: 
+                promedio = alturasDisciplina / atletasTotal
+                listaPromediosDisciplinas.append(promedio)
+                alturasDisciplina = 0
+                atletasTotal = 0
+                linea = archivoPromediosAbierto.readline()
+                continue
+            else: 
+                texto, altura = linea.strip().split(":")
+                alturasDisciplina += altura
+                atletasTotal += 1
+                linea = archivoPromediosAbierto.readline()
+    
+    promediosTotal = 0
+    cantidadDisciplinas = len(listaDisciplinas)
+    for i in range(len(listaPromediosDisciplinas)):
+        promediosTotal += listaPromediosDisciplinas[i]
+
+    promedioAlturasDisciplinas = promediosTotal / cantidadDisciplinas
+    for i in range(len(listaPromediosDisciplinas)): 
+        if listaPromediosDisciplinas[i] > promedioAlturasDisciplinas: 
+            print("La altura promedio del deporte ", listaDisciplinas[i], "es mayor a la altura promedio de todas las disciplinas, ", promedioAlturasDisciplinas)
+                
+
+archivoAlturas = grabarAlturas()
+archivoPromedios = grabarPromedio(archivoAlturas)
+mostrarMasAltos(archivoPromedios)
