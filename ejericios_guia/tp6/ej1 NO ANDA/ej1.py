@@ -40,7 +40,7 @@ def guardarApellidos():
             if armenio: 
                 
                 try: 
-                    archivoArmeniaAbierto = open('archivoArmenia.txt', mode = 'wt')
+                    archivoArmeniaAbierto = open(archivoArmenia, mode = 'wt')
                 except IOError: 
                     print("No se pudo abrir el archivoArmenia con exito ")
                 
