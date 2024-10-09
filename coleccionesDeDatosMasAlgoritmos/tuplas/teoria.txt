@@ -1,0 +1,2 @@
+una tupla es una estructura de datos inmutable, ordenada. 
+los datos se encierran entre parentesis, pueden ser de cualquir tipo y no necesitan ser todos del mismo tipo
