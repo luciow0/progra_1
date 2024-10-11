@@ -1,4 +1,4 @@
-conjuntos; estructura de datos desordenada en la que no puede haber valores repetidos, son mutables 
+conjuntos; estructura de datos desordenada (no hay indice) en la que no puede haber valores repetidos, son mutables 
 la cardinalidad de un conjunto es el numero de elementos que lo componen
 
 en piton el tipo de dato para representar conjuntos de datos es set 
@@ -6,3 +6,5 @@ en piton el tipo de dato para representar conjuntos de datos es set
 la sintaxis es la siguiente: conjunto = {valor1,valor2,valor3}
 
 en los elementos entre llaves, si se proporcionan elementos repetidos, no los incluye. IMPORTANTE 
+
+LOS CONJUNTOS PUEDEN SER HETEROGENEOS 

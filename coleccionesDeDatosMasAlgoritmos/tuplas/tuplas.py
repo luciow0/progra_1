@@ -19,4 +19,9 @@ manana, noche, tarde = saludos #desempaquetado
 letras = tuple("lagarto")
 print(letras)
 
+#se pueden concatenar tuplas 
+
+fecha = ()
+fecha += "Martes"
+
 # las tuplas pueden compararse por medio de los opeardores relaciones, siempre y cuando tengan el mismo tipo de datos. y se sigue un criterio similar al de las cadenas 

@@ -1,3 +1,45 @@
 los diccionarios son una coleccion desordenada de pares de datos dela forma: (clave: valor) conocidos como elementos o items
-los diccionarios son estructuras de datos por lo que se pueden modificar, agrandar, achicar, eliminar valores 
+los diccionarios son estructuras de datos mutables por lo que se pueden modificar, agrandar, achicar, eliminar valores 
 a los diccionarios tambien se los conoce como mapa hash o arreglos asociativos 
+
+no hay secuencia, no hay orden, no se pueden indexar, se pueden recorrer con (for each)
+
+el slicing no es aplicable a diccionarios 
+
+si se asigna un valor a una clave de un diccionario inexistente, se crea el par clave valor 
+
+el metodo get admite un segundo parametro para devolver si no existe la clave 
+
+convertir un diccionario a lista te devuelve una lista solo con las claves 
+
+    LAS CLAVES DE UN DICCIONARIO DEBEN SER VALORES INMUTABLES 
+
+    LOS VALORES PUEDEN SER DE CUALQUIER TIPO 
+
+
+SIMILITUDES ENTRE DICCIONARIOS EN PYTHON Y ARCHIVOS JSON:
+
+    En JSON, puedes tener tipos de datos como string, number, boolean, array, y null, que tienen equivalentes en Python:
+
+        string en JSON ↔ str en Python
+        number en JSON ↔ int o float en Python
+        boolean en JSON ↔ bool en Python
+        array en JSON ↔ list en Python
+        null en JSON ↔ None en Python
+    
+    Los diccionarios de Python pueden ser fácilmente convertidos a JSON mediante la librería json, y viceversa. 
+    Esto es útil cuando se trabaja con datos estructurados en un formato que necesita ser almacenado o transmitido.
+
+    Anidación:
+
+    Tanto en JSON como en diccionarios de Python, es posible tener estructuras anidadas, es decir,
+    un valor puede ser otro diccionario/objeto o lista/array.
+
+    Accesibilidad:
+
+    En ambas estructuras puedes acceder a los valores de manera similar usando las claves.
+
+    Estructura de clave-valor:
+
+    Tanto los archivos JSON como los diccionarios de Python se basan en una estructura de pares clave-valor. 
+    En ambos, cada valor está asociado a una clave única.

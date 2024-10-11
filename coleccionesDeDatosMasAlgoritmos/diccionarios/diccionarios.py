@@ -83,8 +83,10 @@ print(diccionarioUpdatear.get('clave4'))
 
 # hay mas de una manera de eliminar elementos de un diccionario 
 # la instruccion 'del' elimina un par por su clave
+# del dic[clave] SI LA CLAVE NO EXISTE DA ERRO
+# del <diccionario> borra todo el diccionario, inclusive la variable
 # pop(clave) elimina el elemento cuya clave se proporciona y regresa el valor de este 
-# popitem() elimina arbitrariamente un item y lo retorna ¿por que querrias hacer eso? 
+# popitem() elimina arbitrariamente un item y lo retorna 
 # clear() vacia el diccionario
 
 """OPERADOR DE MEMBRESIA"""
@@ -116,3 +118,9 @@ for comida in menu:
 # se itera sobre la clave y se muestra el valor 
 
 """METODOS KEYS() VALUES() E ITEMS()"""
+
+# el metodo items(diccionario) retorna una lista de tuplas clave, valor 
+
+# el meotodo claves = diccionario.keys() devuelve una lista con todas las claves del diccionario 
+
+# el metodo valores = diccionario.values() devuelve una lista con todos los valores

@@ -49,11 +49,15 @@ conjuntoUno.update(conjuntoDos) #agrega al conjuntoUno todos los elementos del c
 
 conjuntoUno.pop() # quita un elemento ALEATORIO del conjunto y lo regresa, si el conjunto esta vacio devuelve un keyError
 
-# conjuntoUno.remove(elemento) # elimina el elemento especificado del conjunto, si este no pertenece genera un KEYERROR
+conjuntoUno.remove(elemento) # elimina el elemento especificado del conjunto, si este no pertenece genera un KEYERROR
 
 conjuntoUno.discard(elemento) # elimina el elemento del conjunto y si este no pertenece, no genera un error
  
 conjuntoUno.clear() # vacia el conjunto 
+
+conjuntoUno.issubset() # para ver si es un subconjunto 
+
+
 
 #############
 
