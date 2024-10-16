@@ -9,11 +9,13 @@ def encajarDominos(dominoA, dominoB):
     encajan = True
     conjuntoA = set()
     conjuntoB = set()
-    for numero in dominoA:
-        conjuntoA.add(dominoA)
-    for numero in dominoB: 
-        conjuntoB.add(dominoB)
-    
+    for i in range(len(dominoA)):
+        conjuntoA.add(dominoA[i])
+    print(conjuntoA)
+    for i in range(len(dominoB)): 
+        conjuntoB.add(dominoB[i])
+    print(conjuntoB)
+
     if conjuntoA.isdisjoint(conjuntoB):
         encajan = False
     
