@@ -2,7 +2,6 @@
 # utilizar cadenas de caracteres.
 
 def contarDigitos(numero, n=0):
-    
     if numero > 0: 
         return  contarDigitos(numero //10, n + 1) 
     else: 
