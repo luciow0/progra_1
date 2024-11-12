@@ -20,6 +20,6 @@ def ackerman(m,n):
         return ackerman((m - 1), ackerman(m, n - 1))
     
 
-habiaunavez = ackerman(3,10)
+habiaunavez = ackerman(25,1)
 
 print(habiaunavez)
