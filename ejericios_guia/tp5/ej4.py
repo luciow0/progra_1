@@ -12,10 +12,19 @@ def imprimirNumeros():
 
         except KeyboardInterrupt: 
             print("realmente desea interrumpir la ejecucion del programa? ")
-            eleccion = int(input("ingrese 1 para si 0 para no "))
-            if eleccion == 1: 
-                break
-            else: 
-                pass
+            while True:
+                try:
+                    eleccion = int(input("ingrese 1 para si 0 para no "))
+                    if eleccion == 1: 
+                        break
+                    else: 
+                        break
+                except ValueError: 
+                    print("por favor introducir un entero")
+
+        if eleccion == 1: 
+            break
+        else: 
+             pass
 
 imprimirNumeros()

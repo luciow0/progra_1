@@ -8,17 +8,17 @@ def sumarCadenas(numeroA, numeroB):
     try:
         
         #float(numeroA, numeroB) ERROR 
-        float(numeroA)
-        float(numeroB)
-        #hola = float(numeroA)
-        #hola2 = float(numeroB)
-        resu = numeroA + numeroB
-        #resu = hola + hola2
+        #float(numeroA)
+        #float(numeroB)
+        hola = float(numeroA)
+        hola2 = float(numeroB)
+        #resu = numeroA + numeroB
+        resu = hola + hola2
         return resu
 
         #dos prints diferentes dependiendo de que forma utilices, el de los holas funciona como esperaras, el otro no
 
-    except TypeError: 
+    except ValueError: 
         return -1
 
 
